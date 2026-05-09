@@ -1,6 +1,6 @@
 # Check your Todos...
 
-## Created with React + Vite
+## Created with React + Vite + Tailwindcss
 
 ### Features :
 
