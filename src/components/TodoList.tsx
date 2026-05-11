@@ -14,6 +14,7 @@ export default function TodoList({
   onDeleteTodo,
   onToggleTodo,
 }: TodoListProps) {
+  console.log("TodoList 렌더링");
   const [query, setQuery] = useState<string>("");
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {

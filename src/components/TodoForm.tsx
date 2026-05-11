@@ -6,6 +6,7 @@ type TodoFormProps = {
 };
 
 export default function TodoForm({ onAddTodo }: TodoFormProps) {
+  console.log("TodoForm 렌더링");
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const onSubmit = (e: SubmitEvent<HTMLFormElement>) => {

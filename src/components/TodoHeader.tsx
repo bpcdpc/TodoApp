@@ -1,4 +1,5 @@
 export default function TodoHeader() {
+  console.log("Header 렌더링");
   const now = new Date().toDateString();
   return (
     <header className="mb-8">

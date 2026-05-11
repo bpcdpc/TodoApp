@@ -4,6 +4,7 @@ import TodoList from "./TodoList";
 import type { Todo } from "../types/Todo";
 
 export default function TodoMain() {
+  console.log("TodoMain 렌더링");
   const [todos, setTodos] = useState<Todo[]>([]);
   const idRef = useRef<number>(todos.length + 1);
 
