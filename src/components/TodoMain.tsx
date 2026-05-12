@@ -1,4 +1,4 @@
-import { useCallback, useReducer, useRef } from "react";
+import { useReducer, useRef } from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 import type { Todo } from "../types/Todo";
