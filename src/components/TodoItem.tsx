@@ -12,6 +12,7 @@ export default function TodoItem({
   onToggleTodo,
 }: TodoItemProps) {
   const { id, content, date, isDone } = todo;
+  console.log(`${id} TodoItem 렌더링`);
 
   const onDelete = () => {
     onDeleteTodo(id);
