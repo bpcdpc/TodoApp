@@ -21,7 +21,19 @@ export default function TodoList({
     setQuery(e.target.value);
   };
 
-  const filteredTodos = todos.filter((todo) => todo.content.includes(query));
+  const filteredTodos =
+    query === ""
+      ? todos
+      : todos.filter((todo) => todo.content.toLowerCase().includes(query));
+
+  const analyzeTodos = (todos: Todo[]) => {
+    const totalCount = todos.length;
+    const notDoneCount =
+      todos.length - todos.filter((todo) => !todo.isDone).length;
+    return { totalCount, notDoneCount };
+  };
+
+  const { totalCount, notDoneCount } = analyzeTodos(todos);
 
   return (
     <div className="flex flex-col gap-4 justify-center">
@@ -36,6 +48,9 @@ export default function TodoList({
         />
       </div>
       <div>
+        <div className="flex justify-end text-sm text-gray-400 mb-3">
+          남은 작업 {notDoneCount} / {totalCount}
+        </div>
         <ul className="flex flex-col gap-3">
           {filteredTodos.map((todo) => (
             <TodoItem

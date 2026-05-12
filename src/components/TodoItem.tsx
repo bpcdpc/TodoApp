@@ -29,7 +29,7 @@ export default function TodoItem({
         checked={isDone ? true : false}
       />
       <p
-        className={`flex-1 cursor-pointer${isDone ? " line-through text-gray-400" : ""}`}
+        className={`flex-1 cursor-pointer ${isDone ? " line-through text-gray-400" : ""}`}
         onClick={onToggle}
       >
         {content}
